@@ -6,6 +6,8 @@
 //	Andrés Felipe García Albarracín
 //	Andrea Rozo
 
+#include "functions.h"
+
 /**
 * Calcula los coeficientes de las pendientes k1, k2, k3 y k4
 */
@@ -33,7 +35,7 @@ void calK(double t, double x, double y, double z, double h, double *k1, double *
 */
 double slopeXYZ(double t, double x, double y, double z, double h, double *k1, double *k2, double *k3, double *k4, double *slope)
 {
-	calk(t, x, y, z, h, k1, k2, k3, k4);
+	calK(t, x, y, z, h, k1, k2, k3, k4);
 	slope[0] = (k1[0] + 2*k2[0] + 2*k3[0] + k4[0])/6;
 	slope[1] = (k1[1] + 2*k2[1] + 2*k3[1] + k4[1])/6;
 	slope[2] = (k1[2] + 2*k2[2] + 2*k3[2] + k4[2])/6;
