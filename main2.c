@@ -12,10 +12,10 @@
 #include <math.h>
 #include "functions.h"
 #include "slopes.h"
-//<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #include <time.h>
-//>>>>>>> 0a23926e69fa255cff2d6d9da1bb5b5cbfd53c88
+>>>>>>> 0a23926e69fa255cff2d6d9da1bb5b5cbfd53c88
 
 #define tInicial 0.0
 #define tFinal 30.0
@@ -34,16 +34,16 @@ int main()
 	double *k3 = malloc(3*sizeof(double));
 	double *k4 = malloc(3*sizeof(double));
 	double *slope = malloc(3*sizeof(double));
-//<<<<<<< HEAD
+<<<<<<< HEAD
 	double Xini = 1;
 	double Yini = 0;
 	double Zini = 0;
-//=======
+=======
 	srand48 (time(NULL));
 	double Xini = drand48()*20-10;
 	double Yini = drand48()*20-10;
 	double Zini = drand48()*20-10;
-//>>>>>>> 0a23926e69fa255cff2d6d9da1bb5b5cbfd53c88
+>>>>>>> 0a23926e69fa255cff2d6d9da1bb5b5cbfd53c88
 	FILE 	*fileOut;
 
 	if(!t || !x || !y || !z || !k1 || !k2 || !k3 || !k4)
