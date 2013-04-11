@@ -31,7 +31,7 @@ void calK(double t, double x, double y, double z, double h, double *k1, double *
 /**
 * Calcula el vector de pendientes
 */
-double slopeXYZ(double t, double x, double y, double z, double h, double *k1, double *k2, double *k3, double *k4, double* slope)
+double slopeXYZ(double t, double x, double y, double z, double h, double *k1, double *k2, double *k3, double *k4, double *slope)
 {
 	calk(t, x, y, z, h, k1, k2, k3, k4);
 	slope[0] = (k1[0] + 2*k2[0] + 2*k3[0] + k4[0])/6;
