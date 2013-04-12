@@ -1,8 +1,8 @@
-fileOut.txt: prueba.exe
-	./prueba.exe
 
-prueba.exe: main.o slopes.o functions.o
+fileOut.txt: main.o slopes.o functions.o
 	cc -lm main.o slopes.o functions.o -o prueba.exe
+	./prueba.exe
+	gnuplot graphics.gp
 
 main.o: main.c
 	cc -c main.c
