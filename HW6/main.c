@@ -31,10 +31,10 @@ int main()
 	double *k3 = malloc(3*sizeof(double));
 	double *k4 = malloc(3*sizeof(double));
 	double *slope = malloc(3*sizeof(double));
-	//srand48 (time(NULL));
-	double Xini = 1;//drand48()*20-10;
-	double Yini = 1;//drand48()*20-10;
-	double Zini = 1;//drand48()*20-10;
+	srand48 (time(NULL));
+	double Xini = drand48()*20-10;
+	double Yini = drand48()*20-10;
+	double Zini = drand48()*20-10;
 
 
 	FILE 	*fileOut;

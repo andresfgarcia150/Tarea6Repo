@@ -1,3 +1,9 @@
+graph1.svg: fileOut.txt
+
+
+fileOut.txt: prueba.exe
+	./prueba.exe
+
 prueba.exe: main.o slopes.o functions.o
 	cc -lm main.o slopes.o functions.o -o prueba.exe
 
