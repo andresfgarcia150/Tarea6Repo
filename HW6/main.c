@@ -12,10 +12,7 @@
 #include <math.h>
 #include "functions.h"
 #include "slopes.h"
-<<<<<<< HEAD
-=======
 #include <time.h>
->>>>>>> 0a23926e69fa255cff2d6d9da1bb5b5cbfd53c88
 
 #define tInicial 0.0
 #define tFinal 30.0
@@ -23,7 +20,7 @@
 int main()
 {
 	int i;
-	double h = 0.001;
+	double h = 0.01;
 	int n_points = tFinal/h;
 	double *t = malloc(n_points*sizeof(double));
 	double *x = malloc(n_points*sizeof(double));
@@ -34,16 +31,12 @@ int main()
 	double *k3 = malloc(3*sizeof(double));
 	double *k4 = malloc(3*sizeof(double));
 	double *slope = malloc(3*sizeof(double));
-<<<<<<< HEAD
-	double Xini = 1;
-	double Yini = 0;
-	double Zini = 0;
-=======
-	srand48 (time(NULL));
-	double Xini = drand48()*20-10;
-	double Yini = drand48()*20-10;
-	double Zini = drand48()*20-10;
->>>>>>> 0a23926e69fa255cff2d6d9da1bb5b5cbfd53c88
+	//srand48 (time(NULL));
+	double Xini = 1;//drand48()*20-10;
+	double Yini = 1;//drand48()*20-10;
+	double Zini = 1;//drand48()*20-10;
+
+
 	FILE 	*fileOut;
 
 	if(!t || !x || !y || !z || !k1 || !k2 || !k3 || !k4)
@@ -70,7 +63,7 @@ int main()
 		z[i] = z[i-1] + h*slope[2];
 		fprintf(fileOut, "%f	%f	%f	%f\n", t[i], x[i], y[i], z[i]);
 	}
-		
+	
 	
 	fclose(fileOut);		
 	return 0;
