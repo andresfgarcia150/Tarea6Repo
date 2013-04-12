@@ -1,6 +1,3 @@
-graph1.svg: fileOut.txt
-
-
 fileOut.txt: prueba.exe
 	./prueba.exe
 
