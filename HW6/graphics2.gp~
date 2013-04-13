@@ -1,0 +1,10 @@
+set terminal jpeg
+n = 1;
+o1 = sprintf('planoxy%d.jpg',n);
+set output o1
+set title "Plano x-y"
+set xlabel "x"
+set ylabel "y"
+o2 = 'fileOut%d.txt',n);
+plot o2 using 2:3
+
